@@ -42,7 +42,45 @@
          }
 
          .tree li{
-            padding-left: ;
+            padding-left: 20px;
+            margin: 5px 0;
+         }
+
+         .tree span[wm-folder]{
+            cursor: pointer;
+            font-weight: bold;
+            color: #00ced1;
+         }
+
+         .tree li>ul{
+            display: none;
+            margin-left: 20px;
+         }
+
+         .tree li>ul li{
+            padding-left: 20px;
+         }
+
+         .tree li>ul li:hover{
+            color: #005f5f;
+            border-radius: 5px;
+            transition: 0.3s;
+         }
+
+         /* Efeito de hover no itens da arvore*/
+         .tree li> span[wm-folder]:hover{
+            color: #005f5f;
+         }
+
+         /* Estilo do conteudo*/
+         #conteudo{
+            padding: 30px;
+            background-color: white;
+            margin: 20px auto;
+            width: 80%;
+            height: 350px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
          }
     </style>
 </head>
@@ -51,7 +89,7 @@
     <ul class="tree">
         <li>
             <span wm-folder>backend</span>
-            <ul>
+            <ul id="conteudo"> 
              <li>
                 <span wm-folder>app</span>
                 <ul>
