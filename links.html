@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links</title>
     <style>
+        /* Estilo global */
         body{
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #00ced1;
+            background-color: #00CED1;
             color: white;
             margin: 0;
             padding: 20px;
@@ -17,14 +18,14 @@
         /* Estilo h1 */
         h1{
             text-align: center;
-            color: #00ffff;
+            color: #00FFFF;
             font-size: 2.5rem;
             margin-bottom: 30px;
         }
 
-        /* Estilo para os links*/
+        /* Estilo para os links */
         a{
-            color: #00ffff;
+            color: #00FFFF;
             text-decoration: none;
             font-size: 1.2rem;
             padding: 10px 15px;
@@ -35,17 +36,16 @@
         }
 
         a:hover{
-            background-color: #00ffff;
+            background-color: #00FFFF;
             color: #111;
             transform: translateY(-3px);
         }
-
         /* Seção de Notícia */
         #noticia{
             margin-top: 50px;
             padding: 25px;
-            background-color: #005f5f;
-            border-left: 5px solid #00ffff;
+            background-color: #005F5F;
+            border-left: 5px solid #00FFFF;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 600px;
@@ -53,30 +53,30 @@
         }
 
         #noticia a{
-            color: #00ced1;
+            color: #00FFFF;
             font-weight: bold;
             text-decoration: none;
             padding: 8px 15px;
             background-color: transparent;
-            border: 2px solid #00ffff;
+            border: 2px solid #00FFFF;
             border-radius: 5px;
             margin-top: 20px;
             display: inline-block;
         }
 
         #noticia a:hover{
-            background-color: #00ffff;
+            background-color: #00FFFF;
             color: #111;
-            transform: rotate(-3px); /* Efeito de elevação*/
+            transform: rotateY(-3px);/* Efeito de elevação */
         }
 
-        /* Scroll suave */
+        /* scroll suave */
         html{
             scroll-behavior: smooth;
         }
 
-        /* Responsividade */
-        @media(max-width: 768px){
+        /* responsividade */
+        @media(max-width:768px){
             h1{
                 font-size: 2rem;
             }
@@ -94,26 +94,26 @@
 </head>
 <body>
     <h1>Links</h1>
-    <!--URL Absoluta-->
-    <div style="display: flex; flex-direction: column; align-items: center;">
-        <a id="inicio" href="http://www.google.com/"> Google 1</a>
-        <a href="http://www.google.com/" target="_blank">Google 2</a>
-        <br></br>
-        <!-- URL Relativas-->
-         <a href="index.html">Voltar</a>
+    <!-- URL Absoluta -->
+     <div style="display: flex; flex-direction: column; align-items: center;">
+        <a id="inicio" href="https://www.google.com/">Google 1</a>
+        <a href="https://www.google.com/" target="_blank" >Google 2</a>
+        <br><br>
+        <!-- URL Relativas -->
+         <a href="index.html">Voltar 1</a>
          <a href="/index.html">Voltar 2</a>
          <a href="./index.html">Voltar 3</a>
-    </div>
+     </div>
 
- <div style="text-align: center; margin-top: 20px;">
-          <a href="#noticia">Ir para a Notícia</a>
-       </div>
+     <div style="text-align: center; margin-top: 20px;">
+        <a href="#noticia">Ir para a Notícia</a>
+     </div>
 
-       <div id="noticia" style="position: absolute; top: 2000px;">
+     <div id="noticia" style="position: absolute; top:2000px">
         <h2>Notícia Bomba!!!!</h2>
         <p>Não era nada...</p>
-        <a href="#inicio">Voltar Início</a>
-       </div>
+        <a href="#inicio">Voltar Inicio</a>
+     </div>
 
-</body>  
+</body>
 </html>

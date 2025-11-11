@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <style>
-        /* Reset basico*/
+        /* reset basico */
         body{
             font-family: Arial, Helvetica, sans-serif;
             margin: 100px;
@@ -22,7 +22,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 30px;
-            width: 10px;
+            width: 100%;
             max-width: 400px;
         }
 
@@ -36,7 +36,6 @@
             display: flex;
             flex-direction: column;
         }
-
         .form-group{
             margin-bottom: 20px;
         }
@@ -46,6 +45,7 @@
             margin-bottom: 5px;
             display: block;
         }
+
         input,
         textarea,
         select,
@@ -60,7 +60,59 @@
             background-color: #f0f8ff;
         }
 
-        
+        input[type="radio"],
+        input[type="checkbox"]{
+            display: inline-block;
+            width: auto;
+            margin-right: 10px;
+        }
+
+         button{
+            background-color: #00bcd4;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+         }
+
+         button:hover{
+            background-color: #0097a7;
+         }
+
+         select,
+         textarea{
+            transition: border-color 0.3s;
+         }
+
+         input:hover,
+         textarea:hover,
+         select:hover{
+            border-color: #00bcd4;
+            outline: none;
+         }
+
+         fieldset{
+            border: none;
+            padding: 0;
+         }
+
+         legend{
+            font-weight: bold;
+            margin-bottom: 10px;
+         }
+
+         .buttons{
+            display: flex;
+            justify-content: space-between;
+            gap: 1px;
+         }
+
+         @media(max-width:500){
+            .form-container{
+                width: 90%;
+                padding: 20px;
+            }
+         }
     </style>
 </head>
 <body>
@@ -86,16 +138,15 @@
             </div>
 
             <fieldset class="form-group">
-                <legend>Tipos de Usuarios</legend>
+                <legend>Tipos de Usuários</legend>
                 <label for="admin">
-                    <input type="radio" name="admin" id="admim" value="admin"> Admin
+                    <input type="radio" name="tipo" id="admin" value="admin"> Admin
                 </label>
                 <label for="regular">
-                    <input type="radio" nome="tipo" id="regular">Regular           
+                    <input type="radio" name="tipo" id="regular" value="regular"> Regular
                 </label>
                 <label for="professor">
-                    <input type="radio" name="tipo" id="professor" value="professor">
-                    Professor
+                    <input type="radio" name="tipo" id="professor" value="professor"> Professor
                 </label>
             </fieldset>
 
@@ -106,25 +157,26 @@
             </div>
 
             <div class="form-group">
-               <label for="estado">Estado</label>
-               <select name="estado" id="estado">
-                <option value="">Selecione</option>
-                <option value="pr">São Paulo</option>
-                <option value="sp">Rio de Janeiro</option>
-                <option value="rj">Paraná</option>
-                <option value="sc">Santa Catarina</option>
-                <option value="rs">Rio Grande do Sul</option>
-                <option value="es">Espirito Santo</option>
-                <option value="ap">Amapá</option>
-                <option value="ac">Acre</option>
-                <option value="pa">Pará</option>
-               </select>
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado">
+                    <option value="">Selecione</option>
+                    <option value="ac">Acre</option>
+                    <option value="ap">Amapá</option>
+                    <option value="ba">Bahia</option>
+                    <option value="pr">Paraná</option>
+                    <option value="pa">Pará</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="sc">Santa Catarina</option>
+                    <option value="rs">Rio Grande do Sul</option>
+                    <option value="es">Espírito Santo</option>
+                </select>
             </div>
 
             <div class="form-group">
                 <label for="interesses">Interesses</label>
-                <select name="interesses" id="interesses" multiple size="7">
-                    <option value="js">JavaScript</option>
+                <select name="interesses" id="interesses" multiple size="7"> 
+                    <option value="js">Javascript</option>
                     <option value="java">Java</option>
                     <option value="php">PHP</option>
                     <option value="python">Python</option>
@@ -135,7 +187,7 @@
 
             <div class="form-group buttons">
                 <button type="submit">Incluir</button>
-                <button formaction="http://localhost:3003/usuario/3" type="submit">Alterar</button>
+                <button formaction="http://localhost:3003/usuarios/3" type="submit">Alterar</button>
             </div>
         </form>
     </div>

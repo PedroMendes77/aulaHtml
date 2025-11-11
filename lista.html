@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listas</title>
-
     <style>
         body{
             font-family: 'Times New Roman', Times, serif;
@@ -16,7 +15,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vH;
+            min-height: 100vh;
         }
 
         h1{
@@ -32,24 +31,24 @@
             font-size: 1.8rem;
             color: #00bcd4;
             margin: 20px 0;
-            text-transform: uppercase;
+            text-transform: uppercase; 
         }
 
-        ol, ul{
+        ol, ul, li {
             background-color: #fff;
             border-radius: 8px;
+            padding: 12px;
             margin-bottom: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
-
-        ol, ul:hover, ul li:hover{
-            transform: translate(-5px);
-            background-color:#00bcd4;
+        ol li:hover,  ul li:hover{
+            transform: translateY(-5px);
+            background-color: #00bcd4;
             color: #fff;
         }
 
-        dl, dd{
+        dl dd{
             padding: 8px 16px;
             background-color: #fff;
             border-radius: 8px;
@@ -59,13 +58,14 @@
         }
 
         dl dd:hover{
-            transform: translate(-5px);
-            background-color:#00bcd4;
+            transform: translateY(-5px);
+            background-color: #00bcd4;
             color: #fff;
         }
 
         h1, h2, ol li, ul li, dl dd{
-           transition: transform 0.3s ease, background-color 0.3s ease;
+            list-style: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         h1:hover, h2:hover, ol li:hover, ul li:hover, dl dd:hover{
@@ -74,31 +74,37 @@
     </style>
 </head>
 <body>
-    <h2>Aprovados</h2>
-        <ol>
-            <li>Bia</li>
-            <li>Pedro</li>
-            <li>Peteco</li>
-            <li>Jamila</li>
-        </ol>
-    
-        <h2>Lista de Compras</h2>
-        <ul>
-            <li>Queijo</li>
-            <li>Leite</li>
-            <li>Arroz</li>
-            <li>Pão</li>
-        </ul>
+    <h1>Listas</h1>
 
-        <h2>Principais termos de glossário de Clous Computing</h2>
-        <dd>Backend Como Serviço</dd>
+    <!-- Listas Ordenada -->
+    <h2>Aprovados</h2>
+    <ol>
+        <li>Bia</li>
+        <li>Pedro</li>
+        <li>Ana</li>
+        <li>João</li>
+    </ol>
+    
+    <!-- Lista Não Ordenada -->
+     <h2>Lista de Compras</h2>
+     <ul>
+        <li>Queijo</li>
+        <li>Leite</li>
+        <li>Arroz</li>
+        <li>Pão</li>
+     </ul>
+
+     <!-- Lista de Definição -->
+      <h2>Principais termos do glossário de Cloud Computing</h2>
+      <dl>
         <dt>BaaS</dt>
-        <dd>Iaas</dd>
+        <dd>Backend Como Serviço</dd>
+        <dt>Iaas</dt>
         <dd>Infraestrutura Como Serviço</dd>
         <dt>Paas</dt>
-        <dd>Plataforma como Serviço</dd>
+        <dd>Plataforma Como Serviço</dd>
         <dt>Saas</dt>
         <dd>Software Como Serviço</dd>
-       
+      </dl>
 </body>
 </html>
